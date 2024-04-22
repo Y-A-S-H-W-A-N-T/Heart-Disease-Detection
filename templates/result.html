@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            background-size: cover;
+            background-image: url('/static/result.jpg');
+        }
+
+        p{
+            text-align: center;
+            font-size: 30px;
+            color: rgb(94, 44, 69);
+        }
+
+        h1{
+            display: flex;
+            justify-content: left;
+            margin-left: 50px;
+            margin-top: 100px;
+            font-size: 50px;
+            color: rgb(98, 51, 95);
+        }
+
+        .info-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction Result</h1>
+    <div class="info-container">
+        {% if result == 0 %}
+            <p>
+                Great news! No heart disease has been detected. You're healthy.
+                It's important to maintain a healthy lifestyle with regular exercise,
+                a balanced diet, and regular health check-ups.
+            </p>
+        {% else %}
+            <p>
+                Unfortunately, heart disease has been detected. It's crucial to take
+                precautions and consult with a healthcare professional. Consider making
+                lifestyle changes such as adopting a heart-healthy diet, regular exercise,
+                and managing stress. Early detection and proper management can improve outcomes.
+            </p>
+        {% endif %}
+    </div>
+</body>
+</html>
